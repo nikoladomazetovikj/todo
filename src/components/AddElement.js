@@ -15,7 +15,8 @@ function AddElement(props) {
 
         const newItem = {
             item,
-            id
+            id,
+            is_done: false
         }
 
         props.onAddItem(newItem);
@@ -29,7 +30,7 @@ function AddElement(props) {
     return (
         <div>
             <form action="" onSubmit={handleOnSubmit}>
-                <input type='text' value={item.name} onChange={handleInputOnChange}/>
+                <input type='text' value={item} onChange={handleInputOnChange}/>
                 <Button children='ADD' className='button-margin-right add-button'/>
             </form>
         </div>
