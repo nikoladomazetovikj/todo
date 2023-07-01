@@ -1,11 +1,35 @@
 import Button from "../UI/Button";
 import '../styles/Form.css';
+import {useState} from "react";
 
-function AddElement() {
+function AddElement(props) {
+
+    const [item, setItem] = useState({ name: "" });
+
+    function handleOnSubmit(e) {
+        e.preventDefault();
+
+        if (item.name.trim() === '') return alert('Please enter text')
+
+        let id = crypto.randomUUID();
+
+        const newItem = {
+            item,
+            id
+        }
+
+        props.onAddItem(newItem);
+        setItem({ name: "" });
+    }
+
+    function handleInputOnChange(e) {
+        setItem({...item, name: e.target.value})
+    }
+
     return (
         <div>
-            <form action="">
-                <input type='text'/>
+            <form action="" onSubmit={handleOnSubmit}>
+                <input type='text' value={item.name} onChange={handleInputOnChange}/>
                 <Button children='ADD' className='button-margin-right add-button'/>
             </form>
         </div>
