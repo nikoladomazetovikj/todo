@@ -16,3 +16,12 @@ code {
 .text-center {
   text-align: center;
 }
+
+.centered-position {
+  display: flex;
+  justify-content: center;
+}
+
+.margin-top {
+  margin-top: 5rem;
+}
