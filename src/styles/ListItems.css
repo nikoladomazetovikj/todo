@@ -1,0 +1,54 @@
+.notebook-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notebook-list li {
+    display: block;
+    padding: 1rem 5rem;
+    margin-bottom: 0.7rem;
+    border: 0.4rem solid #ccc;
+    border-radius: 0.4rem;
+    color: white;
+}
+
+.notebook-list li label {
+    margin-left: 0.625rem; /* Equivalent to 10px */
+}
+
+.notebook-list li .delete-button {
+    background-color: transparent;
+    border: none;
+    color: #dc3545;
+    font-size: 1rem; /* Equivalent to 16px */
+    cursor: pointer;
+}
+
+.notebook-list li .delete-button:hover {
+    color: #bf2f3b;
+}
+
+.notebook-list li .checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.625rem; /* Equivalent to 10px */
+}
+
+.notebook-list li .checkbox-wrapper input[type="checkbox"] {
+    margin-right: 0.625rem; /* Equivalent to 10px */
+}
+
+.notebook-list li .checkbox-wrapper .checkbox-custom {
+    display: inline-block;
+    width: 1.125rem; /* Equivalent to 18px */
+    height: 1.125rem; /* Equivalent to 18px */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.notebook-list li .checkbox-wrapper input[type="checkbox"]:checked + .checkbox-custom {
+    background-color: #007bff;
+}
