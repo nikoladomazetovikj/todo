@@ -4,12 +4,12 @@ import {useState} from "react";
 
 function AddElement(props) {
 
-    const [item, setItem] = useState({ name: "" });
+    const [item, setItem] = useState( "" );
 
     function handleOnSubmit(e) {
         e.preventDefault();
 
-        if (item.name.trim() === '') return alert('Please enter text')
+        if (item.trim() === '') return alert('Please enter text')
 
         let id = crypto.randomUUID();
 
@@ -19,11 +19,11 @@ function AddElement(props) {
         }
 
         props.onAddItem(newItem);
-        setItem({ name: "" });
+        setItem("");
     }
 
     function handleInputOnChange(e) {
-        setItem({...item, name: e.target.value})
+        setItem(e.target.value)
     }
 
     return (
